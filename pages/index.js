@@ -11,7 +11,7 @@ export default () => {
   console.log(q)
 
   const onChange = (e) => {
-    const url = String(`/?q=${e.target.value}`);
+    const url = encodeURI(`/?q=${e.target.value}`);
     router.push(url, null, { shallow: true });
   }
 
